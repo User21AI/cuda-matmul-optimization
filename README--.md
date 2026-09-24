@@ -2,7 +2,7 @@
 
 Step-by-step optimization of single-precision matrix multiplication (`C = A * B`, row-major, FP32) in CUDA, from a naive kernel to one that reaches roughly 97-103% of cuBLAS on large matrices. Every stage is checked for correctness against cuBLAS and timed in the same harness.
 
-**Hardware:** Google Colab, GPU: `<paste the GPU name from the "GPU:" line>`
+**Hardware:** Google Colab, GPU: T4
 **Timing method:** 5 warm-up launches, then the median of 20 launches (`cudaEvent`), FP32, GFLOPS = 2n³ / time. Each size was run 3 times; the middle run is reported.
 
 ## Results
